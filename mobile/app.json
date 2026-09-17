@@ -2,6 +2,7 @@
   "expo": {
     "name": "Famiglia Grassi",
     "slug": "famiglia-grassi",
+    "owner": "fakedream99s-team",
     "version": "1.0.0",
     "orientation": "portrait",
     "scheme": "famigliagrassi",
@@ -9,6 +10,7 @@
     "plugins": ["expo-router", "expo-secure-store"],
     "android": {"package": "it.famigliagrassi.mobile"},
     "ios": {"bundleIdentifier": "it.famigliagrassi.mobile"},
-    "experiments": {"typedRoutes": true}
+    "experiments": {"typedRoutes": true},
+    "cli": {"appVersionSource": "remote"}
   }
 }
