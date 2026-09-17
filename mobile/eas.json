@@ -6,8 +6,10 @@
   "build": {
     "preview": {
       "distribution": "internal",
+      "node": "20.19.4",
       "android": {
-        "buildType": "apk"
+        "buildType": "apk",
+        "image": "sdk-54"
       },
       "env": {
         "NPM_CONFIG_LEGACY_PEER_DEPS": "true"
@@ -15,8 +17,10 @@
     },
     "production": {
       "distribution": "store",
+      "node": "20.19.4",
       "android": {
-        "buildType": "app-bundle"
+        "buildType": "app-bundle",
+        "image": "sdk-54"
       }
     }
   }
