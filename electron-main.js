@@ -87,7 +87,7 @@ app.whenReady().then(async () => {
       minWidth: 1100,
       minHeight: 700,
       title: "Famiglia Grassi",
-      icon: path.join(process.resourcesPath, "assets", "famiglia-grassi.ico"),
+      icon: path.join(process.resourcesPath, "assets", "famiglia-grassi.png"),
       autoHideMenuBar: true,
       webPreferences: {
         contextIsolation: true,
@@ -103,5 +103,4 @@ app.whenReady().then(async () => {
     app.quit();
   }
 });
-
 app.on("window-all-closed", () => app.quit());
