@@ -24,6 +24,10 @@ jobs:
         run: npm install
       - name: Install Expo/EAS CLI
         run: npm install --global eas-cli
+      - name: Configure EAS project
+        run: eas init --account fakedream99s-team --non-interactive
+        env:
+          EXPO_TOKEN: ${{ secrets.EXPO_TOKEN }}
       - name: Build APK with EAS
         run: eas build --platform android --profile preview --non-interactive
         env:
