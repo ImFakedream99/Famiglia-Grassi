@@ -87,7 +87,7 @@ app.whenReady().then(async () => {
       minWidth: 1100,
       minHeight: 700,
       title: "Famiglia Grassi",
-      icon: path.join(__dirname, "assets", "famiglia-grassi.svg"),
+      icon: path.join(process.resourcesPath, "assets", "famiglia-grassi.ico"),
       autoHideMenuBar: true,
       webPreferences: {
         contextIsolation: true,
