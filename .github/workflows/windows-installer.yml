@@ -6,6 +6,8 @@ on:
   pull_request:
     branches: [main]
   workflow_dispatch:
+  issues:
+    types: [opened]
   schedule:
     - cron: '*/10 * * * *'
 
@@ -18,6 +20,7 @@ concurrency:
 
 jobs:
   build-windows:
+    if: github.event_name != 'issues' || github.event.issue.title == '[BUILD] Windows installer'
     runs-on: windows-latest
     steps:
       - name: Checkout
