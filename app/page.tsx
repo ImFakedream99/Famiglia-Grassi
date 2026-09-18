@@ -126,7 +126,7 @@ export default function Home(){
           <div className="hero-side"><strong>▣ &nbsp; {dateLong.format(new Date())}</strong><p>“La famiglia è il luogo dove la vita inizia e l'amore non finisce mai.”</p><span>♥</span></div>
         </section>
 
-        {update?.status&&<div className="notice">{update.status==='checking'?'Controllo aggiornamenti…':update.status==='available'?\`È disponibile la versione ${update.version}. Download in corso…`:update.status==='downloaded'?<><span>Aggiornamento pronto.</span> <button onClick={()=>window.famigliaApp?.updates.install()}>Installa e riavvia</button></>:update.status==='not-available'?'✓ L’app è aggiornata.':`Aggiornamento non disponibile: ${update.message||'errore'}`}</div>}
+        {update?.status&&<div className="notice">{update.status==='checking'?'Controllo aggiornamenti…':update.status==='available'?`È disponibile la versione ${update.version}. Download in corso…`:update.status==='downloaded'?<><span>Aggiornamento pronto.</span> <button onClick={()=>window.famigliaApp?.updates.install()}>Installa e riavvia</button></>:update.status==='not-available'?'✓ L’app è aggiornata.':`Aggiornamento non disponibile: ${update.message||'errore'}`}</div>}
 
         <section className="quick-grid">{filtered.map(([icon,label,table,desc,tone])=><a className="quick-card" key={label} href={`./area/index.html?table=${table}`}><span className={`quick-icon ${tone}`}>{icon}</span><div><h3>{label}</h3><p>{desc}</p></div><b>›</b></a>)}</section>
 
